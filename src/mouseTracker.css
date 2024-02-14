@@ -1,0 +1,31 @@
+/* Define the styles for the loader container */
+.loader-container {
+    position: fixed;
+    width: 5px; /* Adjust the width of the loader container */
+    height: 5px; /* Adjust the height of the loader container */
+    background-color: rgba(18, 63, 101, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Create a circular loader container */
+    pointer-events: none; /* Ensure the loader container does not interfere with mouse events */
+    z-index: 9999; /* Ensure the loader container appears on top of other content */
+  }
+  
+  /* Define the styles for the loader animation */
+  .loader {
+    border: 8px solid #f3f3f3; /* Light grey loader border */
+    border-top: 8px solid #3498db; /* Blue loader border for animation */
+    border-radius: 50%; /* Create a circular loader */
+    width: 60px; /* Adjust the width of the loader */
+    height: 60px; /* Adjust the height of the loader */
+    animation: spin 1s linear infinite; /* Apply the spin animation to the loader */
+    position: absolute; /* Position the loader within the loader container */
+    top: 50%; /* Center the loader vertically */
+    left: 50%; /* Center the loader horizontally */
+    transform: translate(-50%, -50%); /* Center the loader precisely */
+  }
+  
+  /* Define the spin animation for the loader */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
